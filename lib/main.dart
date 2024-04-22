@@ -1,4 +1,4 @@
-import 'package:android/page/login_page.dart';
+import 'package:android/auth/login_or_register.dart';
 import 'package:android/theme/dark_mode.dart';
 import 'package:android/theme/light_mode.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         title: 'Android',
         theme: lightMode,
         darkTheme: darkMode,
-        home: LoginPage(),
+        home: const LoginOrRegister(),
       ),
     );
   }

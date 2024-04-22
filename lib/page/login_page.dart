@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LoginPage extends StatelessWidget {
+  final void Function()? onTap;
+
+  LoginPage({super.key, this.onTap});
+
   //text controller
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  LoginPage({super.key});
 
   //login method
   void login() {}
@@ -77,7 +80,7 @@ class LoginPage extends StatelessWidget {
                         color: Theme.of(context).colorScheme.inversePrimary),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: onTap,
                     child: const Text(
                       " Register here",
                       style: TextStyle(fontWeight: FontWeight.bold),
