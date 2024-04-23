@@ -5,10 +5,10 @@ class GetLocationPage extends StatefulWidget {
   const GetLocationPage({super.key});
 
   @override
-  _GetLocationPageState createState() => _GetLocationPageState();
+  GetLocationPageState createState() => GetLocationPageState();
 }
 
-class _GetLocationPageState extends State<GetLocationPage> {
+class GetLocationPageState extends State<GetLocationPage> {
   final _location = Location();
   LocationData? _currentLocation;
 
@@ -36,8 +36,9 @@ class _GetLocationPageState extends State<GetLocationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Get Your Location'),
-        backgroundColor: Colors.teal, // Use a visually appealing color
+        centerTitle: true,
+        title: const Text('L O C A T I O N'),
+        backgroundColor: Colors.transparent, // Use a visually appealing color
       ),
       body: Center(
         child: Column(

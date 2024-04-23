@@ -8,10 +8,10 @@ class UploadViewPage extends StatefulWidget {
   const UploadViewPage({super.key});
 
   @override
-  _UploadGalleryPageState createState() => _UploadGalleryPageState();
+  UploadGalleryPageState createState() => UploadGalleryPageState();
 }
 
-class _UploadGalleryPageState extends State<UploadViewPage> {
+class UploadGalleryPageState extends State<UploadViewPage> {
   // Firebase Storage instance (assuming Firebase is already initialized)
   final FirebaseStorage storage = FirebaseStorage.instance;
 
@@ -28,14 +28,16 @@ class _UploadGalleryPageState extends State<UploadViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Image Gallery'),
+        centerTitle: true,
+        title: const Text('I M A G E'),
         actions: [
           // Add a button to pick images
           IconButton(
-            icon: Icon(Icons.add_a_photo),
+            icon: const Icon(Icons.add_a_photo),
             onPressed: () => _pickImage(),
           ),
         ],
+        backgroundColor: Colors.transparent,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
